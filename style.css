@@ -1,0 +1,77 @@
+/* Sayfa Genel Ayarları */
+body {
+    background-color: hsla(60, 73%, 6%, 0.222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Kart Tasarımı */
+.proje-karti {
+    background: hsl(305, 81%, 52%);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(246, 240, 240, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Ekran (Hataların Olduğu Kısım Burasıydı) */
+#ekran {
+    width: 90%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ee0b3c;
+    border-radius: 10px;
+    background: #fafafa; /* Doğru yazım: iki nokta ve noktalı virgül */
+    color: #9e4646;        /* Doğru yazım: iki nokta ve noktalı virgül */
+}
+
+/* Buton Düzeni */
+.butonlar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #e3a1a1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #f06666;
+}
+
+/* İşlem Butonları */
+.islem {
+    background: #e2e2e9;
+    color: #3e4145;
+}
+
+/* Eşittir Butonu */
+.esittir {
+    background: #1a73e8;
+    color: rgb(52, 204, 62);
+    grid-row: span 2;
+}
+
+/* Alt Bilgi */
+.bilgi-alani {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #1417d6;
+    border-top: 1px solid #0b47eb;
+    padding-top: 15px;
+}

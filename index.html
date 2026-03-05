@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hesap Makinesi Projesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="proje-karti">
+        <h1>Hesap Makinesi</h1>
+        
+        <input type="text" id="ekran" readonly placeholder="0">
+
+        <div class="butonlar">
+            <button onclick="temizle()" class="islem">C</button>
+            <button onclick="ekle('/')" class="islem">÷</button>
+            <button onclick="ekle('*')" class="islem">×</button>
+            <button onclick="ekle('-')" class="islem">-</button>
+            
+            <button onclick="ekle('7')">7</button>
+            <button onclick="ekle('8')">8</button>
+            <button onclick="ekle('9')">9</button>
+            <button onclick="ekle('+')" class="islem">+</button>
+            
+            <button onclick="ekle('4')">4</button>
+            <button onclick="ekle('5')">5</button>
+            <button onclick="ekle('6')">6</button>
+            <button onclick="hesapla()" class="esittir">=</button>
+            
+            <button onclick="ekle('1')">1</button>
+            <button onclick="ekle('2')">2</button>
+            <button onclick="ekle('3')">3</button>
+            <button onclick="ekle('0')">0</button>
+        </div>
+
+        <div class="bilgi-alani">
+            <p><strong>Hazırlayan:</strong> Zelal Koç (Niko)</p>
+            <p><strong>Sınıf:</strong> Bilgisayar Programcılığı</p>
+        </div>
+    </div>
+
+    <script>
+        const ekran = document.getElementById('ekran');
+        function ekle(deger) { ekran.value += deger; }
+        function temizle() { ekran.value = ""; }
+        function hesapla() {
+            try { ekran.value = eval(ekran.value); }
+            catch { ekran.value = "Hata"; }
+        }
+    </script>
+</body>
+</html>

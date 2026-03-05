@@ -1,0 +1,63 @@
+# Fonksiyon Tanımlamaları
+def toplama(s1, s2):
+    return s1 + s2
+
+def cikarma(s1, s2):
+    return s1 - s2
+
+def carpma(s1, s2):
+    return s1 * s2
+
+def bolme(s1, s2):
+    return s1 / s2
+
+def karekök(s1,s2):
+    return s1**(1/s2)
+
+    # Sıfıra bölünme hatasını kontrol ediyoruz
+    if s2 == 0:
+        return "Hata: Sıfıra bölünemez!"
+    return s1 / s2
+
+# Ana Program Kısmı
+print("--- Hesap Makinesi ---")
+
+# Kullanıcıdan sayıları float (ondalıklı) tipinde alıyoruz
+sayi1 = float(input("Birinci sayıyı girin: "))
+sayi2 = float(input("İkinci sayıyı girin: "))
+
+# İşlem türünü seçtiriyoruz
+islem = input("İşlem seçin (+, -, *, /): ")
+
+# if-elif-else yapısı ile ilgili fonksiyonu çağırıyoruz
+if islem == "+":
+    sonuc = toplama(sayi1, sayi2)
+elif islem == "-":
+    sonuc = cikarma(sayi1, sayi2)
+elif islem == "*":
+    sonuc = carpma(sayi1, sayi2)
+elif islem == "/":
+    sonuc = bolme(sayi1, sayi2)
+else:
+    işlem = input("İşlem seçin (karekok): ")    
+    if islem == "karekok":
+        sonuc = karekök(sayi1, sayi2)
+    sonuc = "Geçersiz işlem türü!"
+# Sonucu ekrana yazdırıyoruz
+print("Sonuç:", sonuc)
+# Temel İşlem Fonksiyonları
+def topla(a, b): return a + b
+def cikar(a, b): return a - b
+def carp(a, b): return a * b
+def bol(a, b): return a / b if b != 0 else "Hata"
+
+print("--- Hesap Makinesi ---")
+s1 = float(input("Sayı 1: "))
+s2 = float(input("Sayı 2: "))
+islem = input("İşlem (+, -, *, /): ")
+
+if islem == "+": print("Sonuç:", topla(s1, s2))
+elif islem == "-": print("Sonuç:", cikar(s1, s2))
+elif islem == "*": print("Sonuç:", carp(s1, s2))
+elif islem == "/": print("Sonuç:", bol(s1, s2))
+else: print("Geçersiz işlem")
